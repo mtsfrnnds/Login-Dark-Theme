@@ -1,0 +1,148 @@
+:root {
+    --background-color: #282a36;
+    --main-button: #50fa7b;
+    --main-title: #ff79c6;
+    --background-card: #6272a4;
+    --background-input: #44475a;
+    --input-text: #f1fa8c;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-image {
+    width: 100%;
+}
+
+.main-login {
+    width: 100%;
+    height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side {
+    width: 50vh;
+    height: 100vh; /*altura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-side {
+    width: 50vw;
+    height: 100vh; /*altura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    color:var(--main-title);
+}
+
+.card-login {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 17px 45px;/*o padding margins para dentro do comprimento*/
+    background: var(--background-card);
+    border-radius: 8px;
+    box-shadow: 1px 1px 40px #44475a;
+    font-weight: 900;
+    color: var(--main-title);
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 5px;
+}/*align-items um em cima do outro(eixo y) e justify-content lado a lado(eixo x).
+com o flex-direction, inverte.*/
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background: var(--background-input);
+    color: var(--input-text);
+    font-size: 12pt;
+    box-shadow: 1px 1px 10px #44475a;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: var(--input-text);
+    margin-bottom: 5px;
+}
+
+.textfield > input::placeholder {
+    color: #6272a4;
+}
+
+.button-login {
+    width: 100%;
+    padding: 12px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--main-button);
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px 40px #44475a;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+}
+
+.button-login:hover {
+    background-color: #1fd84d;
+    text-shadow: 1px ;
+}
+
+.button-login:active {
+    transform: scale(0.98);
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .main-login {
+        flex-direction: column;
+    }
+    .left-side > h1 {
+        display: none;
+    }
+
+    .left-side {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-image {
+        width: 50vw;
+    }
+}/*responsividade para celular*/
